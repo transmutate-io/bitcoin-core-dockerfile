@@ -1,6 +1,6 @@
-FROM debian:9.9-slim
+FROM debian:10.2-slim
 
-ENV VERSION 0.18.0
+ENV VERSION 0.19.0.1
 
 ENV PATH /opt/bitcoin-${VERSION}/bin:$PATH
 
