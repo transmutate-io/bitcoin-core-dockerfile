@@ -1,12 +1,12 @@
-FROM debian:10.4-slim
+FROM debian:10.5-slim
 
-ENV VERSION 0.20.0
+ENV VERSION 0.20.1
 
 ENV PATH /opt/bitcoin-${VERSION}/bin:$PATH
 
 RUN useradd -r bitcoin && \
     apt-get update -y && \
-    apt-get install -y curl gnupg gosu && \
+    apt-get install -y curl gnupg && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     curl -SL https://bitcoin.org/laanwj-releases.asc | gpg --batch --import && \
